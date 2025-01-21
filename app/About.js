@@ -68,7 +68,7 @@ const About = ({ isDarkMode }) => {
     >
       <div className="kimberly-lin-photo">
         <motion.img
-          src={isDarkMode ? "/media/Kimberlylin_2.png" : "/media/k_colour.jpg"}
+          src={isDarkMode ? "/media/Kimberlylin_2.png" : "/media/k_colour.JPG"}
           className="about-photo"
           alt="Kimberly Lin"
           initial={{ opacity: 0, y: 20 }}
