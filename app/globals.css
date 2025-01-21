@@ -1,0 +1,429 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
+
+  --light-bg: #d9e8ae;
+  --light-color: black;
+
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+}
+/* Apply colors dynamically */
+
+/* Dark mode overrides */
+:root.dark {
+  --light-bg: darkslategray;
+  --light-color: ghostwhite;
+}
+
+.header {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+html body {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+::selection {
+  background-color: orange;
+}
+
+.kimberly-lin-photo,
+.about-text,
+.about-heading,
+.sub-tags,
+.about-content,
+.portfolio-container,
+.portfolio-heading,
+.portfolio-slider,
+.portfolio-view,
+.portfolio-case,
+.portfolio-case-section,
+.portfolio-case-section-links,
+.dots,
+.contact-container,
+.contact-container-content-top,
+.contact-container-content,
+.contact-heading,
+.footer {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+.footer img {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+/* Header Styles */
+
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;  /*Dynamically adjust height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Add spacing between logo and nav */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav button {
+    color: var(--foreground);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    flex: 0;
+  }
+
+  .nav button:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+    border: none; /* Ensures no visible border */
+    background-color: transparent; /* Optional, keeps the button background unchanged */
+    border-radius: 10px; /* Rounds the corners of the border */
+  }
+
+  .section {
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+    margin: 0 auto;
+  }
+}
+
+.nav button:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+  border: none; /* Ensures no visible border */
+  background-color: transparent; /* Optional, keeps the button background unchanged */
+  border-radius: 10px; /* Rounds the corners of the border */
+}
+
+.contact-container-content-top {
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+
+.contact-container-content button:hover img {
+  transition: transform 0.2s ease, filter 0.2s ease; /* Smooth hover effect */
+  transform: scale(1.1); /* Slight zoom effect */
+  filter: brightness(1.2); /* Brightens the image */
+}
+
+
+/* Header styles for larger screens (default layout) */
+header {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-bg);
+    color: var(--dark-color);
+  }
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Utility for text and background application */
+body {
+  @apply text-foreground bg-background font-sans;
+}
+
+@layer components {
+  .header {
+    @apply fixed top-0 left-0 w-full flex justify-between px-8 py-6 z-50;
+  }
+
+  .nav {
+    @apply flex gap-10;
+  }
+
+  .nav button {
+    @apply bg-transparent border-none text-base px-2 cursor-pointer;
+  }
+
+
+  .kimberly-lin-btn {
+    @apply text-2xl font-serif font-bold border-none cursor-pointer flex px-8 py-2;
+  }
+
+  .about-container,
+  .portfolio-container .portfolio-heading,
+  .contact-container {
+    margin-top: 60px;
+  }
+  
+  .about-heading,
+  .portfolio-container .portfolio-heading,
+  .contact-heading {
+    font-size: 2rem; /* Set custom size (e.g., 2rem = 32px) */
+    font-family: serif; /* Ensure the font stays serif */
+  }
+
+  .contact-container {
+    text-align: center; /* Centers the title inside the container */
+  }
+  
+
+  .contact-heading {
+    display: inline-block;
+    text-align: center; /* Ensures the title is horizontally centered */
+    margin: 0 auto; /* Centers the title container */
+    padding: 20px 0; /* Adds spacing above and below the title */
+    margin-bottom: -40px;
+  }
+
+  .footer {
+    display: flex;
+    font-size: x-small;
+    margin-top: 100px;
+    text-align: center;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+  }
+
+  .button-img {
+    @apply w-16 h-auto mr-2; /* Adjusted size for responsiveness */
+  }
+
+  #Introduce-section {
+    @apply mt-0 mb-[0rem] pb-0 text-left text-lg;
+    margin-bottom: -60px;
+  }
+
+
+  .section {
+    min-height: 100vh; /* Full height for each section */
+    width: 100%; /* Full width of the viewport */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    align-items: center;
+    justify-content: center;
+    margin-left: 130px;
+    padding: 2rem; /* Ensure spacing around content */
+  }
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/***********************************************************************/
+.portfolio-container {
+  text-align: center;
+  margin: 2em auto;
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.portfolio-heading {
+  font-size: 2.5em;
+  font-weight: none;
+  margin-bottom: 1em;
+}
+
+.portfolio-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio-view {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.portfolio-case {
+  width: 600px; /* Fixed width */
+  height: 410px; /* Fixed height */
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio-video {
+  display: block; /* Makes sure it's treated as a block-level element */
+  margin: 0 auto; /* Centers the video horizontally */
+  width: 400px; /* Adjust the size of the video */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2em;
+  /*color: white;*/
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.arrow:hover {
+  transform: scale(1.4); /* Zoom in by 20% */
+}
+
+.arrow:active {
+  transform: scale(1.7); /* Slight zoom effect on click */
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+  background: gray
+}
+
+
+
+.dot.active {
+  opacity: 1;
+}
+
+.portfolio-case-section-links a {
+  text-decoration: none; /* Remove default underline */
+}
+
+.portfolio-case-section-links a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.portfolio-case-section-links a:active {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/**About.js**/
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.kimberly-lin-photo {
+  margin-bottom: 20px;
+}
+
+.about-photo {
+  width: 250px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.sub-tags {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 30px;
+  font-size: large;
+}
+
+.sub-tag-button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: serif;
+  color: inherit;
+  padding: 5px 10px;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+
+
+.sub-tag-button.active {
+  text-decoration: underline;
+}
+
+.content-section {
+  margin-top: 5px;
+  text-align: left;
+}
+
