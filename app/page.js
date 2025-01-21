@@ -60,7 +60,7 @@ const Page = () => {
             Contact
           </button>
           <button onClick={toggleMode} className="mode-toggle">
-            {isDarkMode ? "☀︎" : "☽˚.⋆"}
+            {isDarkMode ? "☀︎" : "☽"}
           </button>
         </nav>
       </header>
