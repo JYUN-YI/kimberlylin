@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Introduce = ({ isDarkMode }) => {
   const [textArray, setTextArray] = useState([]);
-  const message = `  Hi\nMy name is Kimberly Lin. I am a software engineer.\nWelcome to my site — feel free to explore here ☺`;
+  const message = `  Hi\nMy name is Kimberly Lin. I am a Data/ML engineer.\nWelcome to my site — feel free to explore here :)`;
 
   useEffect(() => {
     let index = 0;
