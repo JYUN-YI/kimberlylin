@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Kimberly Lin | Software Engineer",
+  title: "Kimberly Lin | Data/ML Engineer",
   description: "Personal Website",
 };
 
