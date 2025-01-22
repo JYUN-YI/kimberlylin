@@ -29,7 +29,7 @@ const Contact = ({ isDarkMode }) => {
         style={{ height: "300px" }}
       >
         <p className="contact-container-content-top">My information below</p>
-        <p className="contact-container-content">🫱Let's connect and have good communication and cooperation🫲</p>
+        <p className="contact-container-content">₊⁺ Let's connect and have good communication and cooperation ⁺₊</p>
         <p className="contact-container-content">⁺₊ I am looking forward to receiving your message ₊⁺</p>
         <br/>
         <div className="contact-container-content">
