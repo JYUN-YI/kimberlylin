@@ -256,6 +256,7 @@ body {
     flex-direction: column; /* Ensure content stacks vertically */
     align-items: center;
     justify-content: center;
+    margin-left: 90px;
     padding: 2rem; /* Ensure spacing around content */
   }
 
