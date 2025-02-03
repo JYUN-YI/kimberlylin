@@ -35,7 +35,7 @@ const Contact = ({ isDarkMode }) => {
         <div className="contact-container-content">
           <button>
             <a 
-              href="https://www.linkedin.com/in/kimberly-lin-716611220/" 
+              href="https://www.linkedin.com/in/kimjylin/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
