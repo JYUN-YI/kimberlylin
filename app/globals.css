@@ -124,8 +124,12 @@ header nav {
   }
 
   .section {
-    padding: 1.5rem; /* Adjusted padding for smaller screens */
-    margin: 0 auto;
+    min-height: 100vh; /* Full height for each section */
+    width: 100%; /* Full width of the viewport */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -256,8 +260,6 @@ body {
     flex-direction: column; /* Ensure content stacks vertically */
     align-items: center;
     justify-content: center;
-    margin-left: 90px;
-    padding: 2rem; /* Ensure spacing around content */
   }
 
 }
