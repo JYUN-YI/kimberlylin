@@ -7,6 +7,22 @@ const Portfolio = ({ isDarkMode }) => {
 
   const projects = [
     {
+      name: 'Heart Discease Analysis',
+      description: 'Implementing class distribution, bivariate and correlation analysis, data standardization, and model building.',
+      issues: '',
+      tools: 'R, tidyverse, ggplot2, dplyr, corrplot',
+      githubLink: 'https://github.com/JYUN-YI/kaggle/blob/main/heart-disease-analysis.ipynb',
+      image: isDarkMode ? '/media/rhd_bw.png' : '/media/rhd.png',
+    },
+    {
+      name: '2003-2011 Global Sexual Violence Analysis',
+      description: 'Focusing on regional patterns, temporal trends, and case proportions. ',
+      issues: '',
+      tools: 'Python, Pandas, Matplotlib, Seaborn, Scikit-Learn, GeoPandas, Prophet',
+      githubLink: 'https://github.com/JYUN-YI/kaggle/blob/main/2003-2011-global-sexual-violence.ipynb',
+      image: isDarkMode ? '/media/sv_bw.png' : '/media/sv.png',
+    },
+    {
       name: '2024 Global Crime Rate Analysis',
       description: 'Using bivariate analysis and correlation heatmaps for data processing, along with visualizing the global distribution of crime rates by country.',
       issues: 'Understanding and calculating correlation among multiple variables',
