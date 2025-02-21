@@ -23,7 +23,7 @@ const About = ({ isDarkMode }) => {
               2017: Graduated with a Bachelor's degree in Information Management from Aletheia University, Taiwan. Gaining fundamental knowledge in programming, database, and project management.<br />
               2017-2019: Self-taught Python, machine learning, and front-end development while contributing to the family business.<br />
               2019-2021: Conducted Android platform testing using ADB commands and manual operations at Askey Computer Corp., Taiwan. Focused on usability, accessibility, performance, stress testing, LAN/WLAN, and TCP/IP.<br />
-              2021-2022: Performed Android platform testing through automated and manual processes at Google's stationary point in Taiwan, with expertise in laboratory testing using Anritsu ME7834NR, Amarisoft, and Anite9000.
+              2022: Performed Android platform testing through automated and manual processes at Google's stationary point in Taiwan, with expertise in laboratory testing using Anritsu ME7834NR, Amarisoft, and Anite9000.
             </p>
           </motion.div>
         );
